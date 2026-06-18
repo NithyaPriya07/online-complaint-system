@@ -3,8 +3,8 @@ import axios from 'axios';
 
 export const ComplaintContext = createContext();
 
-const COMPLAINT_API_URL = 'http://online-complaint-system-wfwh.onrender.com/api/complaints';
-const FEEDBACK_API_URL = 'http://online-complaint-system-wfwh.onrender.com/api/feedback';
+const COMPLAINT_API_URL = 'https://online-complaint-system-wfwh.onrender.com/api/complaints';
+const FEEDBACK_API_URL = 'https://online-complaint-system-wfwh.onrender.com/api/feedback';
 
 export const ComplaintProvider = ({ children }) => {
   const [complaints, setComplaints] = useState([]);
