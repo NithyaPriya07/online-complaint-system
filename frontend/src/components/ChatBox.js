@@ -20,7 +20,7 @@ const ChatBox = ({ complaintId }) => {
     // 1. Fetch message history via HTTP
     const fetchHistory = async () => {
       try {
-        const res = await axios.get(`http://online-complaint-system-wfwh.onrender.com/api/chat/${complaintId}`);
+        const res = await axios.get(`https://online-complaint-system-wfwh.onrender.com/api/chat/${complaintId}`);
         setMessages(res.data.data);
       } catch (err) {
         console.error('Error fetching chat history:', err);
@@ -30,7 +30,7 @@ const ChatBox = ({ complaintId }) => {
     fetchHistory();
 
     // 2. Establish Socket connection
-    const newSocket = io('http://online-complaint-system-wfwh.onrender.com', {
+    const newSocket = io('https://online-complaint-system-wfwh.onrender.com', {
       query: { token },
     });
 
