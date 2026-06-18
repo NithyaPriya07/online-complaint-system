@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const AuthContext = createContext();
 
-const API_URL = 'http://localhost:5000/api/auth';
+const API_URL = 'http://online-complaint-system-wfwh.onrender.com/api/auth';
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
