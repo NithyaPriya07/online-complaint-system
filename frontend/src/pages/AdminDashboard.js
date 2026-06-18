@@ -20,11 +20,11 @@ const AdminDashboard = () => {
       await fetchComplaints();
 
       // Fetch agents
-      const agentsRes = await axios.get('http://localhost:5000/api/agents');
+      const agentsRes = await axios.get('http://online-complaint-system-wfwh.onrender.com/api/agents');
       setAgents(agentsRes.data.data);
 
       // Fetch analytics stats
-      const statsRes = await axios.get('http://localhost:5000/api/agents/stats');
+      const statsRes = await axios.get('http://online-complaint-system-wfwh.onrender.com/api/agents/stats');
       setStats(statsRes.data.data);
     } catch (err) {
       console.error('Error loading admin details:', err);
